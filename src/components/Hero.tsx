@@ -107,15 +107,21 @@ const Hero = () => {
               Contact Me
             </Button>
 
-            <Button
-              variant="outline"
-              size="lg"
-              className="group border-primary/30 hover:border-primary hover:bg-primary/5 backdrop-blur-sm transition-all duration-300 hover:scale-105"
-              onClick={() => window.open('https://github.com/Balaraju9', '_blank')}
-            >
-              <Download className="mr-2 h-5 w-5 group-hover:animate-pulse" />
-              View Resume
-            </Button>
+<Button
+  variant="outline"
+  size="lg"
+  className="group border-primary/30 hover:border-primary hover:bg-primary/5 backdrop-blur-sm transition-all duration-300 hover:scale-105"
+  onClick={() =>
+    window.open(
+      'https://drive.google.com/uc?export=download&id=1H9sZeNCXppXxWuz6RIZtrjUE5TN-2t0R',
+      '_blank'
+    )
+  }
+>
+  <Download className="mr-2 h-5 w-5 group-hover:animate-pulse" />
+  Download Resume
+</Button>
+
 
             <Button
               variant="secondary"
