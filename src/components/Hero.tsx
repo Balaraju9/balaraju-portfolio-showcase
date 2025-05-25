@@ -37,18 +37,33 @@ const Hero = () => {
 
       <div className="container mx-auto px-6 text-center relative z-10">
         <div className="animate-fade-in-up">
-          {/* Enhanced Profile Section */}
-          <div className="relative mb-12">
+          {/* Enhanced Typography */}
+          <div className="space-y-6 mb-8">
+            <h1 className="text-6xl md:text-8xl font-bold leading-tight">
+              <span className="block text-muted-foreground text-2xl md:text-3xl font-normal mb-2">
+                Hi, I'm
+              </span>
+              <span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent bg-[length:200%_auto] animate-gradient-x">
+                Marisetti Balaraju
+              </span>
+              <div className="inline-block ml-4">
+                <Code className="h-12 w-12 md:h-16 md:w-16 text-primary animate-spin-slow" />
+              </div>
+            </h1>
+          </div>
+
+          {/* Enhanced Profile Section - Moved below name */}
+          <div className="relative mb-8">
             {/* Glow Effect Behind Profile */}
             <div className="absolute inset-0 bg-gradient-to-r from-primary/20 via-accent/20 to-primary/20 blur-3xl rounded-full scale-150"></div>
             
             {/* Profile Image with Modern Border */}
-            <div className="w-48 h-48 mx-auto mb-6 relative">
+            <div className="w-40 h-40 mx-auto mb-6 relative">
               <div className="absolute inset-0 bg-gradient-to-r from-primary via-accent to-primary rounded-full p-1 animate-spin-slow">
                 <div className="w-full h-full bg-background rounded-full"></div>
               </div>
               <div className="absolute inset-2 bg-gradient-to-br from-primary/20 to-accent/20 rounded-full flex items-center justify-center backdrop-blur-sm">
-                <span className="text-7xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+                <span className="text-5xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
                   MB
                 </span>
               </div>
@@ -61,20 +76,8 @@ const Hero = () => {
             </div>
           </div>
 
-          {/* Enhanced Typography */}
+          {/* Description and Tech Stack */}
           <div className="space-y-6 mb-12">
-            <h1 className="text-6xl md:text-8xl font-bold leading-tight">
-              <span className="block text-muted-foreground text-2xl md:text-3xl font-normal mb-2">
-                Hi, I'm
-              </span>
-              <span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent bg-[length:200%_auto] animate-gradient-x">
-                Marisetti Balaraju
-              </span>
-              <div className="inline-block ml-4">
-                <Code className="h-12 w-12 md:h-16 md:w-16 text-primary animate-spin-slow" />
-              </div>
-            </h1>
-
             <p className="text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
               <span className="text-primary font-semibold">Flutter & Full-Stack Developer</span>
               <br />
