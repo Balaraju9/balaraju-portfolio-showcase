@@ -55,7 +55,7 @@ const Hero = () => {
                 <div className="w-full h-full bg-background rounded-full"></div>
               </div>
               <div className="absolute inset-2 rounded-full overflow-hidden">
-                <img alt="Marisetti Balaraju - Profile" className="w-full h-full object-cover rounded-full" src="/lovable-uploads/5fcd9543-f729-42b8-a7f4-e2793c555d6b.png" />
+                <img alt="Marisetti Balaraju - Profile" src="/lovable-uploads/5fcd9543-f729-42b8-a7f4-e2793c555d6b.png" className="w-full h-full rounded-full object-fill" />
               </div>
             </div>
 
