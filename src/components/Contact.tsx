@@ -1,5 +1,4 @@
-import { useRef } from 'react';
-import emailjs from 'emailjs-com';
+import { useState } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -8,38 +7,35 @@ import { Mail, Github, Linkedin, User } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 
 const Contact = () => {
-  const formRef = useRef<HTMLFormElement>(null);
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: ''
+  });
   const { toast } = useToast();
 
-  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    
+    // Create mailto link
+    const mailtoLink = mailto:22a91a05j1@aec.edu.in?subject=Contact from ${formData.name}&body=${formData.message}%0D%0A%0D%0AFrom: ${formData.name}%0D%0AEmail: ${formData.email};
+    
+    window.open(mailtoLink);
+    
+    toast({
+      title: "Message Prepared!",
+      description: "Your email client should open with the message ready to send.",
+    });
+    
+    // Reset form
+    setFormData({ name: '', email: '', message: '' });
+  };
 
-    if (!formRef.current) return;
-
-    emailjs
-      .sendForm(
-        'service_yyu7rpw',       // Your Service ID
-        'template_e9vrcbs',      // Your Template ID
-        formRef.current,
-        'bScHXhmmC--w1g-pi'      // Your Public Key
-      )
-      .then(
-        () => {
-          toast({
-            title: "Message Sent!",
-            description: "Thanks for reaching out. I’ll get back to you shortly.",
-          });
-          formRef.current?.reset(); // Clear form
-        },
-        (error) => {
-          console.error('EmailJS Error:', error.text);
-          toast({
-            title: "Error",
-            description: "Failed to send message. Please try again later.",
-            variant: "destructive",
-          });
-        }
-      );
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
   };
 
   const socialLinks = [
@@ -93,11 +89,13 @@ const Contact = () => {
               <CardTitle className="text-2xl text-primary">Send a Message</CardTitle>
             </CardHeader>
             <CardContent>
-              <form ref={formRef} onSubmit={sendEmail} className="space-y-6">
+              <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
                   <Input
                     name="name"
                     placeholder="Your Name"
+                    value={formData.name}
+                    onChange={handleChange}
                     required
                     className="bg-muted/50"
                   />
@@ -107,6 +105,8 @@ const Contact = () => {
                     name="email"
                     type="email"
                     placeholder="Your Email"
+                    value={formData.email}
+                    onChange={handleChange}
                     required
                     className="bg-muted/50"
                   />
@@ -115,6 +115,8 @@ const Contact = () => {
                   <Textarea
                     name="message"
                     placeholder="Your Message"
+                    value={formData.message}
+                    onChange={handleChange}
                     required
                     rows={5}
                     className="bg-muted/50"
@@ -137,7 +139,7 @@ const Contact = () => {
               <CardContent className="space-y-6">
                 <div>
                   <h4 className="font-semibold mb-3">Primary Contact</h4>
-                  <a
+                  <a 
                     href="mailto:22a91a05j1@aec.edu.in"
                     className="flex items-center text-muted-foreground hover:text-primary transition-colors"
                   >
@@ -155,7 +157,7 @@ const Contact = () => {
                         href={link.url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className={`flex items-center p-3 rounded-lg bg-muted/50 transition-all duration-300 hover:glow-effect ${link.color}`}
+                        className={flex items-center p-3 rounded-lg bg-muted/50 transition-all duration-300 hover:glow-effect ${link.color}}
                       >
                         <link.icon className="mr-2 h-5 w-5" />
                         <span className="text-sm font-medium">{link.name}</span>
