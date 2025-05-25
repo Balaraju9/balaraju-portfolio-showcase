@@ -32,7 +32,7 @@ const Contact = () => {
           formRef.current?.reset(); // Clear form
         },
         (error) => {
-          console.error('EmailJS Error:', error);
+          console.error('EmailJS Error:', error.text);
           toast({
             title: "Error",
             description: "Failed to send message. Please try again later.",
