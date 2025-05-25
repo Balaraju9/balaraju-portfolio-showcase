@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -112,6 +111,30 @@ export default {
 				'gradient-shift': {
 					'0%, 100%': { backgroundPosition: '0% 50%' },
 					'50%': { backgroundPosition: '100% 50%' }
+				},
+				'wave': {
+					'0%': { transform: 'rotate(0deg)' },
+					'10%': { transform: 'rotate(14deg)' },
+					'20%': { transform: 'rotate(-8deg)' },
+					'30%': { transform: 'rotate(14deg)' },
+					'40%': { transform: 'rotate(-4deg)' },
+					'50%': { transform: 'rotate(10deg)' },
+					'60%': { transform: 'rotate(0deg)' },
+					'100%': { transform: 'rotate(0deg)' }
+				},
+				'gradient-x': {
+					'0%, 100%': {
+						'background-size': '200% 200%',
+						'background-position': 'left center'
+					},
+					'50%': {
+						'background-size': '200% 200%',
+						'background-position': 'right center'
+					}
+				},
+				'spin-slow': {
+					from: { transform: 'rotate(0deg)' },
+					to: { transform: 'rotate(360deg)' }
 				}
 			},
 			animation: {
@@ -119,7 +142,10 @@ export default {
 				'accordion-up': 'accordion-up 0.2s ease-out',
 				'float': 'float 6s ease-in-out infinite',
 				'fade-in-up': 'fade-in-up 0.6s ease-out',
-				'gradient-shift': 'gradient-shift 8s ease infinite'
+				'gradient-shift': 'gradient-shift 8s ease infinite',
+				'wave': 'wave 2.5s infinite',
+				'gradient-x': 'gradient-x 15s ease infinite',
+				'spin-slow': 'spin-slow 8s linear infinite'
 			},
 			backgroundImage: {
 				'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
