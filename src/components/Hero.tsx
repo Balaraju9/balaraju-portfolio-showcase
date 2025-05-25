@@ -62,10 +62,12 @@ const Hero = () => {
               <div className="absolute inset-0 bg-gradient-to-r from-primary via-accent to-primary rounded-full p-1 animate-spin-slow">
                 <div className="w-full h-full bg-background rounded-full"></div>
               </div>
-              <div className="absolute inset-2 bg-gradient-to-br from-primary/20 to-accent/20 rounded-full flex items-center justify-center backdrop-blur-sm">
-                <span className="text-5xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-                  MB
-                </span>
+              <div className="absolute inset-2 rounded-full overflow-hidden">
+                <img 
+                  src="https://i.postimg.cc/d34Sj4jw/profileimagetechnicalhubdi.png" 
+                  alt="Marisetti Balaraju - Profile"
+                  className="w-full h-full object-cover rounded-full"
+                />
               </div>
             </div>
 
