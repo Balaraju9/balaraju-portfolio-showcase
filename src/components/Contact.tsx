@@ -1,44 +1,10 @@
-
-import { useState } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Mail, Github, Linkedin, User } from 'lucide-react';
-import { useToast } from '@/hooks/use-toast';
 
 const Contact = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: ''
-  });
-  const { toast } = useToast();
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    
-    // Create mailto link
-    const mailtoLink = `mailto:22a91a05j1@aec.edu.in?subject=Contact from ${formData.name}&body=${formData.message}%0D%0A%0D%0AFrom: ${formData.name}%0D%0AEmail: ${formData.email}`;
-    
-    window.open(mailtoLink);
-    
-    toast({
-      title: "Message Prepared!",
-      description: "Your email client should open with the message ready to send.",
-    });
-    
-    // Reset form
-    setFormData({ name: '', email: '', message: '' });
-  };
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
-  };
-
   const socialLinks = [
     {
       name: "GitHub",
@@ -90,13 +56,22 @@ const Contact = () => {
               <CardTitle className="text-2xl text-primary">Send a Message</CardTitle>
             </CardHeader>
             <CardContent>
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <form
+                action="https://formsubmit.co/22a91a05j1@aec.edu.in"
+                method="POST"
+                className="space-y-6"
+              >
+                {/* Disable captcha */}
+                <input type="hidden" name="_captcha" value="false" />
+                {/* Use table template for email */}
+                <input type="hidden" name="_template" value="table" />
+                {/* Redirect after submission - replace with your real URL */}
+                <input type="hidden" name="_next" value="https://your-portfolio-url.com/thank-you" />
+
                 <div>
                   <Input
                     name="name"
                     placeholder="Your Name"
-                    value={formData.name}
-                    onChange={handleChange}
                     required
                     className="bg-muted/50"
                   />
@@ -106,8 +81,6 @@ const Contact = () => {
                     name="email"
                     type="email"
                     placeholder="Your Email"
-                    value={formData.email}
-                    onChange={handleChange}
                     required
                     className="bg-muted/50"
                   />
@@ -116,8 +89,6 @@ const Contact = () => {
                   <Textarea
                     name="message"
                     placeholder="Your Message"
-                    value={formData.message}
-                    onChange={handleChange}
                     required
                     rows={5}
                     className="bg-muted/50"
@@ -140,7 +111,7 @@ const Contact = () => {
               <CardContent className="space-y-6">
                 <div>
                   <h4 className="font-semibold mb-3">Primary Contact</h4>
-                  <a 
+                  <a
                     href="mailto:22a91a05j1@aec.edu.in"
                     className="flex items-center text-muted-foreground hover:text-primary transition-colors"
                   >
