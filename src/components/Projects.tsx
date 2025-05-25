@@ -10,21 +10,24 @@ const Projects = () => {
       description: "Educational app built in Flutter to enhance language skills with AI feedback and progress reports. Features interactive lessons, personalized learning paths, and real-time performance analytics.",
       technologies: ["Flutter", "Firebase", "AI Integration", "Analytics"],
       color: "from-tech-blue to-blue-600",
-      githubUrl: "https://github.com/Balaraju9"
+      githubUrl: "https://github.com/Balaraju9/hoot_app_project",
+      demoUrl: "https://play.google.com/store/apps/details?id=com.technicalhub.hoot"
     },
     {
       title: "Group Chatting App",
       description: "Real-time Node.js application using WebSockets for instant messaging with user authentication and media sharing capabilities. Supports group management and message encryption.",
       technologies: ["Node.js", "WebSockets", "MongoDB", "Express"],
       color: "from-tech-teal to-teal-600",
-      githubUrl: "https://github.com/Balaraju9"
+      githubUrl: "https://github.com/Balaraju9/groupchatting_project",
+      demoUrl: "https://groupchattingapp-qh2y.onrender.com/"
     },
     {
       title: "Shop Nest",
       description: "Cross-platform e-commerce application with Firebase backend, optimized for performance and seamless checkout experience. Features product catalog, cart management, and payment integration.",
       technologies: ["Flutter", "Firebase", "Payment Gateway", "Cloud Functions"],
       color: "from-tech-purple to-purple-600",
-      githubUrl: "https://github.com/Balaraju9"
+      githubUrl: "https://github.com/Balaraju9/Shop_nest_project",
+      demoUrl: "https://github.com/Balaraju9/Shop_nest_project" // same as code for now
     }
   ];
 
@@ -83,7 +86,7 @@ const Projects = () => {
                   <Button
                     size="sm"
                     className="flex-1"
-                    onClick={() => window.open(project.githubUrl, '_blank')}
+                    onClick={() => window.open(project.demoUrl, '_blank')}
                   >
                     Demo
                   </Button>
@@ -98,3 +101,4 @@ const Projects = () => {
 };
 
 export default Projects;
+
