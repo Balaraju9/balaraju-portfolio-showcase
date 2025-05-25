@@ -1,10 +1,47 @@
+import { useRef } from 'react';
+import emailjs from 'emailjs-com';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Mail, Github, Linkedin, User } from 'lucide-react';
+import { useToast } from '@/hooks/use-toast';
 
 const Contact = () => {
+  const formRef = useRef<HTMLFormElement>(null);
+  const { toast } = useToast();
+
+  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    if (!formRef.current) return;
+
+    emailjs
+      .sendForm(
+        'service_yyu7rpw',       // Your Service ID
+        'template_e9vrcbs',      // Your Template ID
+        formRef.current,
+        'bScHXhmmC--w1g-pi'      // Your Public Key
+      )
+      .then(
+        () => {
+          toast({
+            title: "Message Sent!",
+            description: "Thanks for reaching out. I’ll get back to you shortly.",
+          });
+          formRef.current?.reset(); // Clear form
+        },
+        (error) => {
+          console.error('EmailJS Error:', error.text);
+          toast({
+            title: "Error",
+            description: "Failed to send message. Please try again later.",
+            variant: "destructive",
+          });
+        }
+      );
+  };
+
   const socialLinks = [
     {
       name: "GitHub",
@@ -56,18 +93,7 @@ const Contact = () => {
               <CardTitle className="text-2xl text-primary">Send a Message</CardTitle>
             </CardHeader>
             <CardContent>
-              <form
-                action="https://formsubmit.co/22a91a05j1@aec.edu.in"
-                method="POST"
-                className="space-y-6"
-              >
-                {/* Disable captcha */}
-                <input type="hidden" name="_captcha" value="false" />
-                {/* Use table template for email */}
-                <input type="hidden" name="_template" value="table" />
-                {/* Redirect after submission - replace with your real URL */}
-                <input type="hidden" name="_next" value="https://your-portfolio-url.com/thank-you" />
-
+              <form ref={formRef} onSubmit={sendEmail} className="space-y-6">
                 <div>
                   <Input
                     name="name"
