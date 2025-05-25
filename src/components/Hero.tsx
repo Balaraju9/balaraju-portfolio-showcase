@@ -1,6 +1,6 @@
 
 import { Button } from '@/components/ui/button';
-import { ArrowDown, Mail, Github, Download, ExternalLink } from 'lucide-react';
+import { ArrowDown, Mail, Github, Download, ExternalLink, Code } from 'lucide-react';
 
 const Hero = () => {
   const scrollToSection = (sectionId: string) => {
@@ -70,7 +70,9 @@ const Hero = () => {
               <span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent bg-[length:200%_auto] animate-gradient-x">
                 Marisetti Balaraju
               </span>
-              <span className="inline-block animate-wave ml-4">👋</span>
+              <div className="inline-block ml-4">
+                <Code className="h-12 w-12 md:h-16 md:w-16 text-primary animate-spin-slow" />
+              </div>
             </h1>
 
             <p className="text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
