@@ -1,3 +1,4 @@
+
 import { useState } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -18,7 +19,7 @@ const Contact = () => {
     e.preventDefault();
     
     // Create mailto link
-    const mailtoLink = mailto:22a91a05j1@aec.edu.in?subject=Contact from ${formData.name}&body=${formData.message}%0D%0A%0D%0AFrom: ${formData.name}%0D%0AEmail: ${formData.email};
+    const mailtoLink = `mailto:22a91a05j1@aec.edu.in?subject=Contact from ${formData.name}&body=${formData.message}%0D%0A%0D%0AFrom: ${formData.name}%0D%0AEmail: ${formData.email}`;
     
     window.open(mailtoLink);
     
@@ -157,7 +158,7 @@ const Contact = () => {
                         href={link.url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className={flex items-center p-3 rounded-lg bg-muted/50 transition-all duration-300 hover:glow-effect ${link.color}}
+                        className={`flex items-center p-3 rounded-lg bg-muted/50 transition-all duration-300 hover:glow-effect ${link.color}`}
                       >
                         <link.icon className="mr-2 h-5 w-5" />
                         <span className="text-sm font-medium">{link.name}</span>
