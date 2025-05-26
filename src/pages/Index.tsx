@@ -8,6 +8,7 @@ import Projects from '@/components/Projects';
 import Achievements from '@/components/Achievements';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
+import FloatingNameButton from '@/components/FloatingNameButton';
 
 const Index = () => {
   return (
@@ -21,6 +22,7 @@ const Index = () => {
       <Achievements />
       <Contact />
       <Footer />
+      <FloatingNameButton />
     </div>
   );
 };
