@@ -9,23 +9,23 @@ const Experience = () => {
       type: "Remote",
       period: "Sep 2024 – Nov 2024",
       achievements: [
-        "Crafted intuitive UI/UX designs for mobile applications",
-        "Suggested and implemented scalable features improving user experience",
-        "Executed comprehensive test cases ensuring 99% bug-free releases",
-        "Improved development timelines by 15% through efficient workflow optimization"
+        "Designed intuitive mobile UIs in Flutter, improving UX flow by 20%",
+        "Suggested 10+ feature improvements used by 1,000+ users",
+        "Executed 50+ test cases with 95% bug-free deployment",
+        "Streamlined workflows across teams, cutting timelines by 15%"
       ],
       color: "from-tech-blue to-blue-600"
     },
     {
       company: "Technical Hub",
-      role: "Mobile App Developer",
+      role: "Mobile App Developer Intern",
       type: "Part-Time",
       period: "Jul 2024 – Aug 2024",
       achievements: [
-        "Built 3+ mobile applications using Flutter framework",
-        "Reduced app response times by 40% through code optimization",
-        "Contributed to 20+ coding challenges and technical assessments",
-        "Collaborated with cross-functional teams on feature development"
+        "Built 3+ functional mobile apps, including a to-do and e-commerce app",
+        "Optimized app response time by 40%",
+        "Collaborated in technical assessments and 20+ coding challenges",
+        "Improved team productivity and coding efficiency by 25%"
       ],
       color: "from-tech-teal to-teal-600"
     }

@@ -7,15 +7,15 @@ const Projects = () => {
   const projects = [
     {
       title: "Hoot App",
-      description: "Educational app built in Flutter to enhance language skills with AI feedback and progress reports. Features interactive lessons, personalized learning paths, and real-time performance analytics.",
-      technologies: ["Flutter", "Firebase", "AI Integration", "Analytics"],
+      description: "Language-learning mobile app with interactive challenges, real-time AI feedback, and analytics dashboards. Enhanced vocabulary retention by 30% and generated 100+ personalized progress reports automatically.",
+      technologies: ["Flutter", "Firebase", "REST APIs", "AI APIs"],
       color: "from-tech-blue to-blue-600",
       githubUrl: "https://github.com/Balaraju9/hoot_app_project",
       demoUrl: "https://play.google.com/store/apps/details?id=com.technicalhub.hoot"
     },
     {
       title: "Group Chatting App",
-      description: "Real-time Node.js application using WebSockets for instant messaging with user authentication and media sharing capabilities. Supports group management and message encryption.",
+      description: "Real-time chat app with group messaging, file sharing, and user authentication. Reduced latency by 35% with optimized sockets and handled 200+ concurrent users with 99.9% uptime.",
       technologies: ["Node.js", "WebSockets", "MongoDB", "Express"],
       color: "from-tech-teal to-teal-600",
       githubUrl: "https://github.com/Balaraju9/groupchatting_project",
@@ -23,11 +23,11 @@ const Projects = () => {
     },
     {
       title: "Shop Nest",
-      description: "Cross-platform e-commerce application with Firebase backend, optimized for performance and seamless checkout experience. Features product catalog, cart management, and payment integration.",
-      technologies: ["Flutter", "Firebase", "Payment Gateway", "Cloud Functions"],
+      description: "E-commerce app with product listings, cart, authentication, and payment integration. Scaled for 2,000+ users with optimized performance and improved checkout flow conversion by 20%.",
+      technologies: ["Flutter", "Firebase", "Cloud Functions", "Payment Gateway"],
       color: "from-tech-purple to-purple-600",
       githubUrl: "https://github.com/Balaraju9/Shop_nest_project",
-      demoUrl: "https://github.com/Balaraju9/Shop_nest_project" // same as code for now
+      demoUrl: "https://github.com/Balaraju9/Shop_nest_project"
     }
   ];
 
@@ -38,7 +38,7 @@ const Projects = () => {
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gradient">Featured Projects</h2>
           <div className="w-20 h-1 bg-primary mx-auto rounded-full"></div>
           <p className="text-muted-foreground mt-4 max-w-2xl mx-auto">
-            Innovative solutions showcasing my expertise in mobile and web development
+            Innovative solutions showcasing expertise in mobile and web development
           </p>
         </div>
 
@@ -101,4 +101,3 @@ const Projects = () => {
 };
 
 export default Projects;
-

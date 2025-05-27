@@ -3,22 +3,22 @@ const Skills = () => {
   const skillCategories = [
     {
       title: "Programming Languages",
-      skills: ["C++", "Dart", "Java", "Python", "JavaScript"],
+      skills: ["Dart", "C++", "Java", "Python", "JavaScript"],
       color: "from-tech-blue to-blue-600"
     },
     {
-      title: "Technologies & Frameworks",
-      skills: ["Flutter", "Firebase", "Node.js", "REST APIs", "SQL", "Spring", "Hibernate"],
+      title: "Frameworks & Technologies",
+      skills: ["Flutter", "Node.js", "React", "Spring", "Hibernate", "Firebase", "REST APIs"],
       color: "from-tech-teal to-teal-600"
     },
     {
       title: "Tools & Platforms",
-      skills: ["Git", "Postman", "VS Code", "Linux", "Docker"],
+      skills: ["Git", "Postman", "VS Code", "Docker", "Linux", "MongoDB", "SQL"],
       color: "from-tech-purple to-purple-600"
     },
     {
-      title: "Concepts & Domains",
-      skills: ["TCP/IP", "Machine Learning", "Distributed Systems", "Unix/Linux", "Mobile Development"],
+      title: "Core Concepts",
+      skills: ["DSA", "TCP/IP", "Unix/Linux", "Distributed Systems", "ML Basics"],
       color: "from-orange-500 to-red-500"
     }
   ];
@@ -68,7 +68,7 @@ const Skills = () => {
             { number: "500+", label: "LeetCode Problems" },
             { number: "200+", label: "GeeksforGeeks Solutions" },
             { number: "70+", label: "CodeChef Problems" },
-            { number: "3+", label: "Mobile Apps Built" }
+            { number: "150+", label: "Code360 Problems" }
           ].map((stat, index) => (
             <div key={index} className="text-center p-4">
               <div className="text-3xl md:text-4xl font-bold text-gradient mb-2">{stat.number}</div>

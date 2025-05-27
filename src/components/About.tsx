@@ -4,7 +4,7 @@ import { Card, CardContent } from '@/components/ui/card';
 const About = () => {
   const education = [
     {
-      degree: "B.Tech in CSE",
+      degree: "Bachelor of Technology (CSE)",
       institution: "Aditya Engineering College",
       period: "2022–2026",
       grade: "CGPA: 8.36"
@@ -34,17 +34,14 @@ const About = () => {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
             <p className="text-lg leading-relaxed text-muted-foreground">
-              I am a passionate software engineer with expertise in <span className="text-primary font-semibold">Flutter</span>, 
-              <span className="text-primary font-semibold"> Firebase</span>, and <span className="text-primary font-semibold">full-stack development</span>. 
-              I thrive on building scalable, user-centric applications and solving complex problems with clean code.
+              I'm a dedicated software developer with hands-on experience in <span className="text-primary font-semibold">mobile and full-stack web development</span>. 
+              I specialize in <span className="text-primary font-semibold">Flutter and Firebase</span>, and enjoy building apps that solve real-world problems with clean, maintainable code.
             </p>
             <p className="text-lg leading-relaxed text-muted-foreground">
-              My goal is to contribute to innovative tech teams and grow as a versatile developer. 
-              With a strong foundation in computer science and hands-on experience in modern technologies, 
-              I'm committed to delivering high-quality solutions that make a difference.
+              With a strong foundation in computer science and problem-solving, I thrive in collaborative environments and aim to contribute to innovative, fast-moving teams.
             </p>
             <div className="flex flex-wrap gap-3 mt-6">
-              {['Problem Solver', 'Team Player', 'Quick Learner', 'Innovation Driven'].map((trait) => (
+              {['Strong DSA Foundation (500+ problems)', 'Fast Learner & Team Player', 'Clean Architecture & UI/UX Focus', 'Always Exploring New Tech'].map((trait) => (
                 <span key={trait} className="px-3 py-1 bg-primary/20 text-primary rounded-full text-sm font-medium">
                   {trait}
                 </span>

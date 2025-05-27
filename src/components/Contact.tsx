@@ -89,7 +89,7 @@ const Contact = () => {
   const profiles = [
     { name: "GeeksforGeeks", url: "https://geeksforgeeks.org/user/balarajumarisetti" },
     { name: "CodeChef", url: "https://codechef.com/users/balu102" },
-    { name: "Naukri Code360", url: "https://naukri.com/code360/profile/Balaraju" }
+    { name: "Code360", url: "https://naukri.com/code360/profile/Balaraju" }
   ];
 
   return (
@@ -99,7 +99,7 @@ const Contact = () => {
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gradient">Let's Connect</h2>
           <div className="w-20 h-1 bg-primary mx-auto rounded-full"></div>
           <p className="text-muted-foreground mt-4 max-w-2xl mx-auto">
-            Ready to collaborate on exciting projects or discuss opportunities? Let's build something amazing together!
+            I'm open to new opportunities, collaborations, and internships. Let's build something amazing together!
           </p>
         </div>
 
