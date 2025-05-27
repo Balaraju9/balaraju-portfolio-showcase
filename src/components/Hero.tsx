@@ -1,3 +1,4 @@
+
 import { Button } from '@/components/ui/button';
 import { ArrowDown, Mail, Github, Download, ExternalLink, Code } from 'lucide-react';
 const Hero = () => {
@@ -52,7 +53,7 @@ const Hero = () => {
               <div className="absolute inset-0 bg-gradient-to-r from-primary via-accent to-primary rounded-full p-1 animate-spin-slow">
                 <div className="w-full h-full bg-background rounded-full"></div>
               </div>
-              <div className="absolute inset-2 rounded-full overflow-hidden">
+              <div className="absolute inset-1 rounded-full overflow-hidden">
                 <img alt="Marisetti Balaraju - Profile" src="/lovable-uploads/5fcd9543-f729-42b8-a7f4-e2793c555d6b.png" className="w-full h-full rounded-full object-cover" />
               </div>
             </div>
